@@ -7,7 +7,7 @@
 }
 }
 .nav_style{
-    background-color: rgba(10, 2, 19, 0.89) !important;
+    background-color: rgba(18, 3, 34, 0.89) !important;
     height: 60px !important;
 }
 .nav_style .nav-item{
