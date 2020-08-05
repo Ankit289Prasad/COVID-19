@@ -10,11 +10,16 @@
     background-color: rgba(10, 2, 19, 0.89) !important;
     height: 60px !important;
 }
+.nav_style .nav-item{
+    height: 60px;
+}
+.nav_style .nav-item a{
+    margin-top: 10px;
+}
 .nav_style a{
     color: whitesmoke !important;
     text-decoration: none;
     height: 100% !important;
-       
 }
 .nav_style a:hover,
 .nav_style a:active{
