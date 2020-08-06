@@ -25,11 +25,41 @@
 .nav_style a:active{
     color: white !important;
 }
-.nav_style .nav-item:hover{
+.nav_style .nav-item:hover,
+.nav_style .nav-item:active{
     background-color: rgba(164, 151, 179, 0.89);
     height: 60px;
 }
 
+.main_header{
+    height:450px;
+    width: 100%;
+}
 
+.rightside h1{
+    font-size: 3rem;
+}
+
+.corona_rotate img{
+    animation: gocorona 3s linear infinite;
+}
+
+@keyframes gocorona{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+
+.leftside img{ animation: unity 6s linear infinite;}
+
+@keyframes unity{
+    10%,50%,90%
+    {
+        transform: scale(0.9);
+    }
+    0%,30%,70%
+    {
+        transform: scale(1);
+    }    
+}
 
 </style>

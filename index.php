@@ -47,19 +47,33 @@
     </nav>
 
     <div class="main_header">
-        <div class="row">
+        <div class="row w-100 h-100">
             <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
                 <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
                     <img src="Images/unity.png" alt="UNITY" width="300" height="300">
                 </div>
             </div>
             <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
-                <div class="rightside">
-                    <h1>Let's Stay Safe & Fight Together Against Cor<span><img src="Images/corona.png"></span>na Virus</h1>
+                <div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+                    <h1>Let's Stay Safe & Fight Together Against Cor<span class="corona_rotate"><img src="Images/corona.png" height="53rem" width="53rem"></span>na Virus</h1>
                 </div>
             </div>
         </div>
     </div>
+
+    <section class="corona_update">
+        <div class="mb-3">
+            <h3 class="text-center">COVID-19 UPDATES</h3>
+        </div>
+
+        <div class="">
+            <div>
+                <div class="count">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
