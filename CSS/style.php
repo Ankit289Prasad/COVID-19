@@ -4,11 +4,13 @@
 @media only screen and (max-width:986px){
 #navbarSupportedContent{
     background-color: rgba(31, 5, 59, 0.822) !important;
+    z-index: 999;
 }
 }
 .nav_style{
     background-color: rgba(18, 3, 34, 0.89) !important;
     height: 60px !important;
+    z-index: 999;
 }
 .nav_style .nav-item{
     height: 60px;
@@ -60,6 +62,36 @@
     {
         transform: scale(1);
     }    
+}
+
+.corona_update{
+    margin:0 0 30px 0;
+}
+.corona_update h3{ color: #ff7675;
+    font-weight: 800;
+    font-size: 2rem;
+}
+.corona_update h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.sub_section{
+    background-color: rgb(238,238,238);
+}
+.sub_section h1{
+    font-weight: 800;
+    color: rgb(1,71,70) !important;
+}
+
+#aboutid h1{
+    font-size: 2.8rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 320;
+}
+
+#aboutid figcaption{
+    padding-top: 8px;
+    font-size: 1.1rem;
 }
 
 </style>
