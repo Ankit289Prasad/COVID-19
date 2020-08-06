@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="rgba(22, 21, 63, 0.952)">
-    <title>COVID-19</title>
+    <title>COVID-19 Outbreaks</title>
     <link rel="icon" href="imes.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php include 'CSS/style.php'; ?>
@@ -199,7 +199,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
-                                    <img src="Images/breathe.jpg" alt="breathe" class="image-fluid" width="100" height="100">
+                                    <img src="Images/wash.png" alt="breathe" class="image-fluid" width="100" height="100">
                                 </figure>
                             </div>
                             <div class="col-lg-8 col-md-8 col-12">
@@ -211,7 +211,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
-                                    <img src="Images/breathe.jpg" alt="breathe" class="image-fluid" width="100" height="100">
+                                    <img src="Images/sneze.png" alt="breathe" class="image-fluid" width="100" height="100">
                                 </figure>
                             </div>
                             <div class="col-lg-8 col-md-8 col-12">
@@ -223,7 +223,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
-                                    <img src="Images/breathe.jpg" alt="breathe" class="image-fluid" width="100" height="100">
+                                    <img src="Images/dis.png" alt="breathe" class="image-fluid" width="100" height="100">
                                 </figure>
                             </div>
                             <div class="col-lg-8 col-md-8 col-12">
@@ -235,7 +235,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
-                                    <img src="Images/breathe.jpg" alt="breathe" class="image-fluid" width="100" height="100">
+                                    <img src="Images/shome.png" alt="breathe" class="image-fluid" width="100" height="100">
                                 </figure>
                             </div>
                             <div class="col-lg-8 col-md-8 col-12">
@@ -247,7 +247,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
-                                    <img src="Images/breathe.jpg" alt="breathe" class="image-fluid" width="100" height="100">
+                                    <img src="Images/news.png" alt="breathe" class="image-fluid" width="100" height="100">
                                 </figure>
                             </div>
                             <div class="col-lg-8 col-md-8 col-12">
@@ -259,7 +259,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
-                                    <img src="Images/breathe.jpg" alt="breathe" class="image-fluid" width="100" height="100">
+                                    <img src="Images/hos.png" alt="breathe" class="image-fluid" width="100" height="100">
                                 </figure>
                             </div>
                             <div class="col-lg-8 col-md-8 col-12">
