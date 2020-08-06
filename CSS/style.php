@@ -1,16 +1,24 @@
 <style type="text/css">
+html{
+    overflow-y:scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+}
 
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Recursive', sans-serif;}
 @media only screen and (max-width:986px){
 #navbarSupportedContent{
     background-color: rgba(31, 5, 59, 0.822) !important;
-    z-index: 999;
+    
 }
 }
 .nav_style{
     background-color: rgba(18, 3, 34, 0.89) !important;
     height: 60px !important;
-    z-index: 999;
 }
 .nav_style .nav-item{
     height: 60px;
@@ -93,5 +101,58 @@
     padding-top: 8px;
     font-size: 1.1rem;
 }
+.fixed-top{
+    
+    position: fixed;
+}
+.pad{
+    padding-top: 90px;
+}
+
+.faicon-facebook:hover{background-color: #385998 !important;}
+.faicon-youtube:hover{background-color: red !important;}
+.faicon-github:hover{background-color: black !important;}
+.faicon-instagram:hover{background-color: #f2003c !important;}
+.faicon-twitter:hover{background-color: #00acee !important;}
+
+#sticky-social-icon .float-sticky-bar>li{
+    background-color: #222;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 4px 5px;
+    width: 150px;
+    position: fixed;
+    z-index: 999;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: flex-end;
+    left: -110px;
+}
+
+#sticky-social-icon .fab{
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 0 10px 10px;
+    width: 35px;
+    margin-left: 8px;
+}
+
+#sticky-social-icon .float-sticky-bar>li:hover{
+    left: 0;
+}
+#sticky-social-icon .float-sticky-bar>li>a{
+    color: #fff !important;
+    text-decoration: none;
+    text-align: center;
+    line-height: 45px !important;
+    vertical-align: top !important;
+}
+
+#sticky-social-icon .position-fb{top:160px}
+#sticky-social-icon .position-in{top:212px}
+#sticky-social-icon .position-tw{top:264px}
+#sticky-social-icon .position-yt{top:316px}
+#sticky-social-icon .position-gt{top:368px}
+
 
 </style>
