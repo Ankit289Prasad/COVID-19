@@ -24,7 +24,8 @@ html,body{
     height: 60px;
 }
 .nav_style .nav-item a{
-    margin-top: 10px;
+    margin-top: 0px;
+    padding-top: 18px;
 }
 .nav_style a{
     color: whitesmoke !important;
@@ -35,11 +36,15 @@ html,body{
 .nav_style a:active{
     color: white !important;
 }
-.nav_style .nav-item:hover,
-.nav_style .nav-item:active{
-    background-color: rgba(164, 151, 179, 0.89);
+.nav_style .nav-item:hover{
+    background-color: rgba(164, 151, 179, 0.39);
     height: 60px;
 }
+.navbar .active{
+    background-color: rgba(164, 151, 179, 0.79);
+}
+
+
 
 .main_header{
     height:450px;

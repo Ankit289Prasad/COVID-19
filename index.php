@@ -44,7 +44,7 @@
     </script>
 </head>
 
-<body id="top" data-spy="scroll" data-target=".navbar" data-offset="90">
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div class="wrapper fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark nav_style p-0">
             <a class="navbar-brand pl-4 py-3" href="#">COVID-19<i class="fa fa-atom pl-2"></i></a>
@@ -56,13 +56,13 @@
             <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link px-4" href="#header">Home</a>
+                        <a class="nav-link px-4 " href="#header">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-4" href="#aboutid1">About</a>
+                        <a class="nav-link px-4 " href="#aboutid1">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-4" href="#aboutid">Symptoms</a>
+                        <a class="nav-link px-4 " href="#aboutid">Symptoms</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-4" href="#prevention">Prevention</a>
