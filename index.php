@@ -271,8 +271,61 @@
             </div>
         </div>
 
+        <div class="container-fluid pt-5 pb-5" id="contact">
+            <div class="section_header text-center mb-5 mt-4">
+                <h1>Contat Us ASAP</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 col-12">
+                        <form>
+                            <div class="form-group">
+                                <label class="l">Username</label>
+                                <input type="text" class="form-control" name="username" required placeholder="Full Name" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="l">Email</label>
+                                <input type="email" class="form-control" name="email" required placeholder="buddy@xyz.com" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="l">Mobile no.</label>
+                                <input type="number" maxlength="12" class="form-control" name="mobile" required placeholder="eg. 98XXXXXXXX" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="l">Select Symptoms</label> <br>
+                                <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+                                    <input type="checkbox" class="custom-control-input" name="coronasym[]" value="cold" id="customcheckbox1">
+                                    <label for="customcheckbox1" class="custom-control-label">Cold</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+                                    <input type="checkbox" class="custom-control-input" name="coronasym[]" value="fever" id="customcheckbox2">
+                                    <label for="customcheckbox2" class="custom-control-label">fever</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+                                    <input type="checkbox" class="custom-control-input" name="coronasym[]" value="breathe" id="customcheckbox3">
+                                    <label for="customcheckbox3" class="custom-control-label">Breathing difficulty</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+                                    <input type="checkbox" class="custom-control-input" name="coronasym[]" value="tired" id="customcheckbox4">
+                                    <label for="customcheckbox4" class="custom-control-label">Weakness</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description" class="l">Describe</label>
+                                <textarea id="explain" style="resize:none;" required minlength="20" class="form-control" cols="30" rows="4" placeholder="Write Something..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
+        <footer class="mt-5">
+            <div class=" text-white text-center container-fluid footer_style">
+                <p>Copyright &copy; 2020 <span style="color: rgb(240, 130, 181);">Ankit Prasad</span></p>
+            </div>
+        </footer>
 
         <div class="wrapper" id="sticky-social-icon">
             <ul class="float-sticky-bar">
@@ -284,9 +337,9 @@
                     <a href="#">Follow!</a>
                     <i class="fab fa-instagram"></i>
                 </li>
-                <li class="position-tw faicon-twitter">
-                    <a href="#">Tweet!</a>
-                    <i class="fab fa-twitter"></i>
+                <li class="position-tw faicon-whatsapp">
+                    <a href="#">Message!</a>
+                    <i class="fab fa-whatsapp"></i>
                 </li>
                 <li class="position-yt faicon-youtube">
                     <a href="#">Watch!</a>
@@ -298,8 +351,6 @@
                 </li>
             </ul>
         </div>
-
-
 
 
     </div>
