@@ -226,7 +226,7 @@
         top: 212px
     }
 
-    #sticky-social-icon .position-tw {
+    #sticky-social-icon .position-wt {
         top: 264px
     }
 
@@ -237,4 +237,25 @@
     #sticky-social-icon .position-gt {
         top: 368px
     }
+
+
+    #myBtn{
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 40px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #00a8ff;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #myBtn:hover{
+        background:rgb(247, 4, 117);
+    }
+
 </style>
