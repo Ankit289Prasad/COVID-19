@@ -200,7 +200,7 @@
                                 </figure>
                             </div>
                             <div class="col-lg-8 col-md-8 col-12">
-                                <p>Cover your nose and mouth with a disposalble tissue or flexed elbow when you cough or sneeze.</p>
+                                <p>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze.</p>
                             </div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                                 </figure>
                             </div>
                             <div class="col-lg-8 col-md-8 col-12">
-                                <p>Avoid close contact (1 meter) or maintain social distancing with prople who are unwell.</p>
+                                <p>Avoid close contact (1 meter) or maintain social distancing with people who are unwell.</p>
                             </div>
                         </div>
                     </div>
@@ -258,7 +258,7 @@
 
         <div class="container-fluid pt-5 pb-5" id="contact">
             <div class="section_header text-center mb-5 mt-4">
-                <h1>Contat Us ASAP</h1>
+                <h1>Contact Us ASAP</h1>
             </div>
             <div class="container">
                 <div class="row">
