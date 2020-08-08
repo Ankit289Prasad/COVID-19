@@ -20,7 +20,7 @@
 
 </head>
 
-<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60" onload="getAPI()">
     <div class="wrapper nav-mobile">
         <nav class="navbar navbar-expand-lg navbar-dark nav_style p-0">
             <a class="navbar-brand pl-4 py-3" href="#">COVID-19<i class="fa fa-atom pl-2"></i></a>
@@ -75,28 +75,28 @@
             <div class="container">
                 <div class="row p-0">
                     <div class="col-lg-3 col-md-3 col-6 text-center">
-                    <div>
-                        <h1 class="count">19,574,592</h1>
-                        <p>Total Cases</p>
-                    </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-6 text-center">
-                    <div>
-                        <h1 class="count">6,280,501</h1>
-                        <p>Active Cases</p>
-                    </div>
+                        <div>
+                            <h1 id="CC"></h1>
+                            <p>Total Cases</p>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-6 text-center">
-                    <div>
-                        <h1 class="count">12,569,354</h1>
-                        <p>Recovered Cases</p>
-                    </div>
+                        <div>
+                            <h1 id="AC"></h1>
+                            <p>Active Cases</p>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-6 text-center">
-                    <div>
-                        <h1 class="count">724,737</h1>
-                        <p>Death Cases</p>
+                        <div>
+                            <h1 id="TR"></h1>
+                            <p>Recovered Cases</p>
+                        </div>
                     </div>
+                    <div class="col-lg-3 col-md-3 col-6 text-center">
+                        <div>
+                            <h1 class="count" id="TD"></h1>
+                            <p>Death Cases</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -368,6 +368,7 @@
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
+
         }
 
 
@@ -377,6 +378,23 @@
             nav.addClass(fixedTop);
         else
             nav.removeClass(fixedTop);
+
+        function getAPI() {
+
+            $.get('https://api.covid19api.com/summary', function(data) {
+                var cc=data.Global.TotalConfirmed, ac, tr=data.Global.TotalRecovered, td=data.Global.TotalDeaths;
+                ac=cc-(td+tr);
+                var a=document.getElementById('CC');
+                a.innerHTML=parseInt(cc);
+                var b=document.getElementById('AC');
+                b.innerHTML=parseInt(ac);
+                var c=document.getElementById('TR');
+                c.innerHTML=parseInt(tr);
+                var d=document.getElementById('TD');
+                d.innerHTML=parseInt(td);
+            });
+
+        }
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
