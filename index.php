@@ -15,8 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu:400,600|Dancing+Script:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
 </head>
 
@@ -51,7 +51,7 @@
         </nav>
     </div>
 
-    <div class="wrapper main_header" >
+    <div class="wrapper main_header">
         <div class="row w-100 h-100" id="header">
             <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
                 <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
@@ -339,7 +339,8 @@
             delay: 10,
             time: 3000
         })
-
+        var nav = $('.nav-mobile');
+        var fixedTop = 'fixed-top';
         mybutton = document.getElementById("myBtn");
         window.onscroll = function() {
             scrollFunction()
@@ -348,10 +349,10 @@
         function scrollFunction() {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 mybutton.style.display = "block";
-
+                nav.addClass(fixedTop);
             } else {
                 mybutton.style.display = "none";
-
+                nav.removeClass(fixedTop);
             }
         }
 
@@ -360,25 +361,13 @@
             document.documentElement.scrollTop = 0;
         }
 
-        var nav = $('.nav-mobile');
-var fixedTop = 'fixed-top';
-var headerHeight = $('#header').height();
 
-/*Check on scroll*/
+        var headerHeight = $('#header').height();
 
-$(window).scroll(function(){
-    if($(window).scrollTop()>headerHeight)
-        nav.addClass(fixedTop);
-    else
-        nav.removeClass(fixedTop);    
-})
-
-/*Check on refresh*/
-
-if($(window).scrollTop()>headerHeight)
-        nav.addClass(fixedTop);
-    else
-        nav.removeClass(fixedTop);
+        if ($(window).scrollTop() > headerHeight)
+            nav.addClass(fixedTop);
+        else
+            nav.removeClass(fixedTop);
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
