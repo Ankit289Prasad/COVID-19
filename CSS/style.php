@@ -54,6 +54,7 @@
             height: 18rem;
             width: 18rem;
             margin-top: -35px;
+            z-index: -1;
         }
         .up h3{
             font-size: 1.8rem !important;
@@ -68,9 +69,10 @@
         }
         #aboutid1 img{
             margin-top: -30px !important;
-            margin-left: -20px;
+            margin-left: -30px;
             height: 100%;
             width: 90%;
+            overflow: hidden;
         }
 
         #aboutid1 .top1 h2{
@@ -86,12 +88,12 @@
             font-size: 0.9rem;
         }
         .corona_update h1{
-            font-size: 1.7rem !important;
+            font-size: 1.4rem !important;
             margin-top: 0px;
             font-weight: 600;
         }
         .corona_update p{
-            font-size: 0.9rem !important;
+            font-size: 0.7rem !important;
             text-align: center;
         }
         #navbarSupportedContent {
@@ -111,6 +113,7 @@
 
     .nav_style .nav-item {
         height: 60px;
+        z-index: 999;
     }
 
     .nav_style .nav-item a {
