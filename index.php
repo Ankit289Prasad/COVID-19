@@ -76,25 +76,25 @@
                 <div class="row px-5">
                     <div class="col-lg-3 col-md-3 col-6 text-center">
                     <div>
-                        <h1 class="count">1,524,890</h1>
+                        <h1 class="count">19,574,592</h1>
                         <p>Total Cases</p>
                     </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-6 text-center">
                     <div>
-                        <h1 class="count">890</h1>
+                        <h1 class="count">6,280,501</h1>
                         <p>Active Cases</p>
                     </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-6 text-center">
                     <div>
-                        <h1 class="count">89</h1>
+                        <h1 class="count">12,569,354</h1>
                         <p>Recovered Cases</p>
                     </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-6 text-center">
                     <div>
-                        <h1 class="count">9</h1>
+                        <h1 class="count">724,737</h1>
                         <p>Death Cases</p>
                     </div>
                     </div>
