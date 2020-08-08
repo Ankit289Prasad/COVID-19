@@ -14,10 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu:400,600|Dancing+Script:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <div class="wrapper fixed-top">
+    <div class="wrapper nav-mobile">
         <nav class="navbar navbar-expand-lg navbar-dark nav_style p-0">
             <a class="navbar-brand pl-4 py-3" href="#">COVID-19<i class="fa fa-atom pl-2"></i></a>
             <div class="pr-2">
@@ -47,8 +51,8 @@
         </nav>
     </div>
 
-    <div class="wrapper main_header" id="header">
-        <div class="row w-100 h-100">
+    <div class="wrapper main_header" >
+        <div class="row w-100 h-100" id="header">
             <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
                 <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
                     <img src="Images/unity.png" alt="UNITY" width="300" height="300" id="mainheader">
@@ -65,10 +69,10 @@
     <div class="wrapper">
         <section class="corona_update">
             <div class="mb-3">
-                <h3 class="text-center pt-3">COVID-19 UPDATES</h3>
+                <h3 class="text-center">COVID-19 UPDATES</h3>
             </div>
 
-            <div class="d-flex justify-content-around align-items-center pt-3">
+            <div class="d-flex justify-content-around align-items-center pt-2">
                 <div>
                     <h1 class="count">1,524,890</h1>
                     <p>Passenger Screened At Airport</p>
@@ -331,10 +335,9 @@
     </div>
 
     <script type="text/javascript">
-
         $('.count').counterUp({
-            delay:10,
-            time:3000
+            delay: 10,
+            time: 3000
         })
 
         mybutton = document.getElementById("myBtn");
@@ -356,12 +359,28 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        var nav = $('.nav-mobile');
+var fixedTop = 'fixed-top';
+var headerHeight = $('#header').height();
+
+/*Check on scroll*/
+
+$(window).scroll(function(){
+    if($(window).scrollTop()>headerHeight)
+        nav.addClass(fixedTop);
+    else
+        nav.removeClass(fixedTop);    
+})
+
+/*Check on refresh*/
+
+if($(window).scrollTop()>headerHeight)
+        nav.addClass(fixedTop);
+    else
+        nav.removeClass(fixedTop);
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="
-    sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="
-    sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
