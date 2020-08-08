@@ -1,15 +1,12 @@
 <style type="text/css">
-    html {
-        scroll-behavior: smooth;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-    
 
     html,
     body {
         margin: 0;
         padding: 0;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     * {
