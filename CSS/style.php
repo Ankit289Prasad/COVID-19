@@ -2,11 +2,8 @@
 
     html,
     body {
-        margin: 0;
-        padding: 0;
         scroll-behavior: smooth;
-        overflow-y: scroll;
-        overflow-x: hidden;
+        overflow:none;
     }
 
     * {
@@ -24,9 +21,16 @@
     }
 
     @media only screen and (max-width:986px) {
+        html,body{
+            overflow-x: hidden;
+        }
+        
         #aboutid .section_header h1{
             font-size: 1.8rem;
             font-weight: 600;
+        }
+        #myBtn{
+            margin-right: -20px;
         }
         #prevention p{
             text-align: center;
@@ -48,8 +52,8 @@
             width: 2rem;
         }
         .leftside img{
-            height: 18rem;
-            width: 18rem;
+            height: 16rem;
+            width: 16rem;
             margin-top: -35px;
             z-index: -1;
         }
@@ -66,7 +70,7 @@
         }
         #aboutid1 img{
             margin-top: -30px !important;
-            margin-left: -30px;
+            margin-left: -25px;
             height: 100%;
             width: 90%;
             overflow: hidden;
@@ -106,6 +110,7 @@
     .nav_style {
         background-color: rgba(18, 3, 34, 0.89) !important;
         height: 60px !important;
+        width: 100%;
     }
 
     .nav_style .nav-item {
