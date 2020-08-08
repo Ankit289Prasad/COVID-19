@@ -27,10 +27,6 @@
     }
 
     @media only screen and (max-width:986px) {
-        #myBtn{
-            margin-right: -25px;
-            margin-bottom: -10px;
-        }
         #aboutid .section_header h1{
             font-size: 1.8rem;
             font-weight: 600;
@@ -60,7 +56,7 @@
             margin-top: -35px;
         }
         .up h3{
-            font-size: 1.5rem !important;
+            font-size: 1.8rem !important;
         }
         .sub_section h1,
         .contact h1{
@@ -90,12 +86,12 @@
             font-size: 0.9rem;
         }
         .corona_update h1{
-            font-size: 1rem !important;
+            font-size: 1.7rem !important;
             margin-top: 0px;
             font-weight: 600;
         }
         .corona_update p{
-            font-size: 0.7rem !important;
+            font-size: 0.9rem !important;
             text-align: center;
         }
         #navbarSupportedContent {

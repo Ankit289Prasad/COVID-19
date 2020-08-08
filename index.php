@@ -72,23 +72,32 @@
                 <h3 class="text-center">COVID-19 UPDATES</h3>
             </div>
 
-            <div class="d-flex justify-content-around align-items-center pt-2">
-                <div>
-                    <h1 class="count">1,524,890</h1>
-                    <p>Passenger Screened At Airport</p>
-                </div>
-
-                <div>
-                    <h1 class="count">890</h1>
-                    <p>Active COVID-19 Cases</p>
-                </div>
-                <div>
-                    <h1 class="count">89</h1>
-                    <p>Recovered COVID-19 Cases</p>
-                </div>
-                <div>
-                    <h1 class="count">9</h1>
-                    <p>Death Cases</p>
+            <div class="container">
+                <div class="row px-5">
+                    <div class="col-lg-3 col-md-3 col-6 text-center">
+                    <div>
+                        <h1 class="count">1,524,890</h1>
+                        <p>Total Cases</p>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 text-center">
+                    <div>
+                        <h1 class="count">890</h1>
+                        <p>Active Cases</p>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 text-center">
+                    <div>
+                        <h1 class="count">89</h1>
+                        <p>Recovered Cases</p>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 text-center">
+                    <div>
+                        <h1 class="count">9</h1>
+                        <p>Death Cases</p>
+                    </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -254,7 +263,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2 col-12">
-                        <form>
+                        <form action="" method="POST">
                             <div class="form-group">
                                 <label class="l">Username</label>
                                 <input type="text" class="form-control" name="username" required placeholder="Full Name" autocomplete="off">
@@ -288,9 +297,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="description" class="l">Describe</label>
-                                <textarea id="explain" style="resize:none;" required minlength="20" class="form-control" cols="30" rows="4" placeholder="Write Something..."></textarea>
+                                <textarea id="explain" style="resize:none;" name="message" required minlength="10" class="form-control" cols="30" rows="4" placeholder="Write Something..."></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -377,3 +386,26 @@
 </body>
 
 </html>
+
+
+<?php
+
+include './Link/dbcon.php';
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $symptoms = $_POST['coronasym'];
+    $message = $_POST['message'];
+
+    $check = "";
+    foreach ($symptoms as $check1) {
+        $check .= $check1 . ",";
+    }
+    $insertquery = "insert into coronamsg(username,email,mobile,symptom,message) values('$username','$email','$mobile','$check','$message')";
+
+    $query = mysqli_query($con, $insertquery);
+}
+
+?>
