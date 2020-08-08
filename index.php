@@ -5,7 +5,7 @@
     <meta name="author" content="Ankit Prasad">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="rgba(22, 21, 63, 0.952)">
+    <!--meta name="theme-color" content="rgba(22, 21, 63, 0.952)"-->
     <title>COVID-19 Outbreaks</title>
     <link rel="icon" href="imes.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -73,7 +73,7 @@
             </div>
 
             <div class="container">
-                <div class="row px-5">
+                <div class="row p-0">
                     <div class="col-lg-3 col-md-3 col-6 text-center">
                     <div>
                         <h1 class="count">19,574,592</h1>
@@ -312,7 +312,7 @@
 
         <footer class="mt-5">
             <div class=" text-white text-center container-fluid footer_style">
-                <p>Copyright &copy; 2020 <span style="color: rgb(240, 130, 181);">Ankit Prasad</span></p>
+                <p><span style="color: rgb(240, 130, 181);">Ankit Prasad </span>&copy; 2020 Copyright</p>
             </div>
         </footer>
 
