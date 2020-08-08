@@ -68,7 +68,7 @@
 
     <div class="wrapper">
         <section class="corona_update">
-            <div class="mb-3">
+            <div class="mb-3 up">
                 <h3 class="text-center">COVID-19 UPDATES</h3>
             </div>
 
@@ -99,11 +99,11 @@
             </div>
 
             <div class="row pt-4">
-                <div class="col-lg-5 col-md-6 col-12 ml-5">
-                    <img src="Images/abot.jpg" alt="ABOUT" class="img-fluid">
+                <div class="col-lg-5 col-md-12 col-12 ml-5 topper justify-content-center">
+                    <img src="Images/abot.jpg" alt="ABOUT" class="img-fluid text-center">
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-12">
+                <div class="col-lg-6 col-md-12 col-12 justify-content-center top1">
                     <h2>What is COVID-19 (Corona Virus)?</h2>
                     <p>COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new
                         virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.
@@ -118,7 +118,7 @@
         </div>
 
         <div class="container-fluid pt-5 pb-5" id="aboutid">
-            <div class="scetion_header text-center nb-5 mt-4">
+            <div class="section_header text-center mb-5 mt-4">
                 <h1>Coronavirus Symptoms</h1>
             </div>
 
@@ -171,7 +171,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="col-lg-4 col-md-8 col-12 mt-5">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="col-lg-4 col-md-8 col-12 mt-5">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
@@ -195,7 +195,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-12 mt-5">
+                    <div class="col-lg-4 col-md-8 col-12 mt-5">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
@@ -207,7 +207,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-12 mt-5 mb-5">
+                    <div class="col-lg-4 col-md-8 col-12 mt-5 mb-5">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
@@ -219,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-12 mt-5 mb-5">
+                    <div class="col-lg-4 col-md-8 col-12 mt-5 mb-5">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">
@@ -231,7 +231,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-12 mt-5 mb-5">
+                    <div class="col-lg-4 col-md-8 col-12 mt-5 mb-5">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <figure class="text-center">

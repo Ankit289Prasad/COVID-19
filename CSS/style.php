@@ -27,6 +27,77 @@
     }
 
     @media only screen and (max-width:986px) {
+        #myBtn{
+            margin-right: -25px;
+            margin-bottom: -10px;
+        }
+        #aboutid .section_header h1{
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        #prevention p{
+            text-align: center;
+            font-size: 0.9rem;
+            padding-right: 2rem;
+            font-weight: 600;
+            padding-left: 2rem;
+        }
+        .rightside h1{
+            padding: 2rem;
+            font-size: 1.9rem !important;
+            padding-bottom: 0;
+            padding-top: 0;
+            font-weight: 500;
+            text-align: center;
+        }
+        .rightside img{
+            height: 2rem;
+            width: 2rem;
+        }
+        .leftside img{
+            height: 18rem;
+            width: 18rem;
+            margin-top: -35px;
+        }
+        .up h3{
+            font-size: 1.5rem !important;
+        }
+        .sub_section h1,
+        .contact h1{
+            font-size: 1.7rem;
+        }
+        .topper{
+            
+            padding-bottom: 20px!important;
+        }
+        #aboutid1 img{
+            margin-top: -30px !important;
+            margin-left: -20px;
+            height: 100%;
+            width: 90%;
+        }
+
+        #aboutid1 .top1 h2{
+            font-size: 1.4rem !important;
+            font-weight: 600;
+            padding-bottom: 1rem;
+            padding-left: 1.8rem;
+        }
+        #aboutid1 .top1 p{
+            padding-left: 1.8rem;
+            padding-right: 1.8rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 0.9rem;
+        }
+        .corona_update h1{
+            font-size: 1rem !important;
+            margin-top: 0px;
+            font-weight: 600;
+        }
+        .corona_update p{
+            font-size: 0.7rem !important;
+            text-align: center;
+        }
         #navbarSupportedContent {
             background-color: rgba(31, 5, 59, 0.822) !important;
 
@@ -34,6 +105,7 @@
         #sticky-social-icon .float-sticky-bar>li{
             margin-left: -150px;
         }
+
     }
 
     .nav_style {
