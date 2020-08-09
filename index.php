@@ -381,13 +381,11 @@
 
         function getAPI() {
 
-            $.get('http://api.coronatracker.com/v3/stats/worldometer/global', function(data) {
+            $.get('https://api.coronatracker.com/v3/stats/worldometer/global', function(data) {
                 var cc = data.totalConfirmed,
                     ac = data.totalActiveCases,
                     tr = data.totalRecovered,
                     td = data.totalDeaths;
-                var a = document.getElementById('CC');
-                //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                 (function($) {
                     $.fn.countTo = function(options) {
                         // merge the default plugin settings with the custom options
