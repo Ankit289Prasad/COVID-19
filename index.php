@@ -89,13 +89,13 @@
                     <div class="col-lg-3 col-md-3 col-6 text-center">
                         <div>
                             <h1 id="TR"></h1>
-                            <p>Recovered Cases</p>
+                            <p>Total Recovered</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-6 text-center">
                         <div>
-                            <h1 class="count" id="TD"></h1>
-                            <p>Death Cases</p>
+                            <h1 id="TD"></h1>
+                            <p>Total Deaths</p>
                         </div>
                     </div>
                 </div>
@@ -381,17 +381,99 @@
 
         function getAPI() {
 
-            $.get('https://api.covid19api.com/summary', function(data) {
-                var cc=data.Global.TotalConfirmed, ac, tr=data.Global.TotalRecovered, td=data.Global.TotalDeaths;
-                ac=cc-(td+tr);
-                var a=document.getElementById('CC');
-                a.innerHTML=parseInt(cc);
-                var b=document.getElementById('AC');
-                b.innerHTML=parseInt(ac);
-                var c=document.getElementById('TR');
-                c.innerHTML=parseInt(tr);
-                var d=document.getElementById('TD');
-                d.innerHTML=parseInt(td);
+            $.get('http://api.coronatracker.com/v3/stats/worldometer/global', function(data) {
+                var cc = data.totalConfirmed,
+                    ac = data.totalActiveCases,
+                    tr = data.totalRecovered,
+                    td = data.totalDeaths;
+                var a = document.getElementById('CC');
+                //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                (function($) {
+                    $.fn.countTo = function(options) {
+                        // merge the default plugin settings with the custom options
+                        options = $.extend({}, $.fn.countTo.defaults, options || {});
+
+                        // how many times to update the value, and how much to increment the value on each update
+                        var loops = Math.ceil(options.speed / options.refreshInterval),
+                            increment = (options.to - options.from) / loops;
+
+                        return $(this).each(function() {
+                            var _this = this,
+                                loopCount = 0,
+                                value = options.from,
+                                interval = setInterval(updateTimer, options.refreshInterval);
+
+                            function updateTimer() {
+                                value += increment;
+                                loopCount++;
+                                $(_this).html(value.toFixed(options.decimals));
+
+                                if (typeof(options.onUpdate) == 'function') {
+                                    options.onUpdate.call(_this, value);
+                                }
+
+                                if (loopCount >= loops) {
+                                    clearInterval(interval);
+                                    value = options.to;
+
+                                    if (typeof(options.onComplete) == 'function') {
+                                        options.onComplete.call(_this, value);
+                                    }
+                                }
+                            }
+                        });
+                    };
+
+                    $.fn.countTo.defaults = {
+                        from: 0, // the number the element should start at
+                        to: 100, // the number the element should end at
+                        speed: 1000, // how long it should take to count between the target numbers
+                        refreshInterval: 100, // how often the element should be updated
+                        decimals: 0, // the number of decimal places to show
+                        onUpdate: null, // callback method for every time the element is updated,
+                        onComplete: null, // callback method for when the element finishes updating
+                    };
+                })(jQuery);
+
+
+                jQuery(function($) {
+                    $('#CC').countTo({
+                        from: 0,
+                        to: parseInt(cc),
+                        speed: 4000,
+                        refreshInterval: 20,
+                        onComplete: function(value) {
+                            console.debug(this);
+                        }
+                    });
+                    $('#AC').countTo({
+                        from: 0,
+                        to: parseInt(ac),
+                        speed: 4000,
+                        refreshInterval: 20,
+                        onComplete: function(value) {
+                            console.debug(this);
+                        }
+                    });
+                    $('#TR').countTo({
+                        from: 0,
+                        to: parseInt(tr),
+                        speed: 4000,
+                        refreshInterval: 20,
+                        onComplete: function(value) {
+                            console.debug(this);
+                        }
+                    });
+                    $('#TD').countTo({
+                        from: 0,
+                        to: parseInt(td),
+                        speed: 4000,
+                        refreshInterval: 20,
+                        onComplete: function(value) {
+                            console.debug(this);
+                        }
+                    });
+                });
             });
 
         }
