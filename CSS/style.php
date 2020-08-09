@@ -1,9 +1,9 @@
 <style type="text/css">
-    /*remove advertisement of webhostapp starts*/
+    /*remove advertisement of 000webhostapp starts*/
     a img{
         display: none !important;
     }
-    /*remove advertisement of webhostapp ends*/
+    /*remove advertisement of 000webhostapp ends*/
     html,
     body {
         scroll-behavior: smooth;
