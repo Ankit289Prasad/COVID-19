@@ -44,6 +44,12 @@
                         <a class="nav-link px-4" href="#prevention">Prevention</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link px-4" href="wcorona.php">World Tracker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4" href="ccorona.php">India Tracker</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link px-4" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -67,7 +73,7 @@
     </div>
 
     <div class="wrapper">
-        <section class="corona_update">
+        <section class="corona_update container-fluid">
             <div class="mb-3 up">
                 <h3 class="text-center">COVID-19 UPDATES</h3>
             </div>
@@ -100,6 +106,23 @@
                     </div>
                 </div>
             </div>
+
+            <!--World table-->
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped text-center" id="tbval">
+                    <tr>
+                        <th>Country</th>
+                        <th>Total Confirmed</th>
+                        <th>New Cases</th>
+                        <th>Total Recovered</th>
+                        <th>Active Cases</th>
+                        <th>Total Deaths</th>
+                        <th>New Deaths</th>
+                    </tr>
+                </table>
+            </div>
+
         </section>
 
         <div class="container-fluid sub_section pt-5 pb-5" id="aboutid1">
@@ -381,6 +404,37 @@
 
         function getAPI() {
 
+            $.get('https://api.coronatracker.com/v3/stats/worldometer/country',function(data){
+                //console.log(data.length);
+
+                var tbval = document.getElementById('tbval');
+                for (var index = 1; index <= data.length; index++) {
+                    var x = tbval.insertRow();
+                    x.insertCell(0);
+                    tbval.rows[index].cells[0].innerHTML = data[index-1]['country'];
+                    tbval.rows[index].cells[0].style.background = '#7a4a91';
+                    tbval.rows[index].cells[0].style.color = 'white';
+
+                    x.insertCell(1);
+                    tbval.rows[index].cells[1].innerHTML = data[index-1]['totalConfirmed'];
+
+                    x.insertCell(2);
+                    tbval.rows[index].cells[2].innerHTML = data[index-1]['dailyConfirmed'];
+
+                    x.insertCell(3);
+                    tbval.rows[index].cells[3].innerHTML = data[index-1]['totalRecovered'];
+
+                    x.insertCell(4);
+                    tbval.rows[index].cells[4].innerHTML = data[index-1]['activeCases'];
+
+                    x.insertCell(5);
+                    tbval.rows[index].cells[5].innerHTML = data[index-1]['totalDeaths'];
+
+                    x.insertCell(6);
+                    tbval.rows[index].cells[6].innerHTML = data[index-1]['dailyDeaths'];
+                }
+            });
+
             $.get('https://api.coronatracker.com/v3/stats/worldometer/global', function(data) {
                 var cc = data.totalConfirmed,
                     ac = data.totalActiveCases,
@@ -473,6 +527,7 @@
                     });
                 });
             });
+
 
         }
     </script>
