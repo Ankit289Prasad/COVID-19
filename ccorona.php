@@ -21,7 +21,7 @@
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="60" onload="getAPI()">
-    <div class="wrapper nav-mobile">
+    <div class="wrapper nav-mobile" id="cc">
         <nav class="navbar navbar-expand-lg navbar-dark nav_style p-0">
             <a class="navbar-brand pl-4 py-3" href="#">COVID-19<i class="fa fa-atom pl-2"></i></a>
             <div class="pr-2">
@@ -47,7 +47,7 @@
                         <a class="nav-link px-4" href="wcorona.php">World Tracker</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-4" href="ccorona.php">India Tracker</a>
+                        <a class="nav-link px-4" href="#cc">India Tracker</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-4" href="index.php#contact">Contact</a>
@@ -57,7 +57,57 @@
         </nav>
     </div>
 
+    <section class="corona_update container-fluid">
+            <div class="mb-3 mt-5 up">
+                <h3 class="text-center">INDIA COVID-19 LIVE UPDATES</h3>
+            </div>
 
+            <div class="container">
+                <div class="row p-0">
+                    <div class="col-lg-3 col-md-3 col-6 text-center">
+                        <div>
+                            <h1 id="CC"></h1>
+                            <p>Total Cases</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 text-center">
+                        <div>
+                            <h1 id="AC"></h1>
+                            <p>Active Cases</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 text-center">
+                        <div>
+                            <h1 id="TR"></h1>
+                            <p>Total Recovered</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 text-center">
+                        <div>
+                            <h1 id="TD"></h1>
+                            <p>Total Deaths</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--World table-->
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped text-center" id="tbval">
+                    <tr>
+                        <th>Country</th>
+                        <th>Total Confirmed</th>
+                        <th>New Cases</th>
+                        <th>Total Recovered</th>
+                        <th>Active Cases</th>
+                        <th>Total Deaths</th>
+                        <th>New Deaths</th>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
 
 
 
@@ -139,7 +189,7 @@
 
         function getAPI() {
 
-            $.get('https://api.coronatracker.com/v3/stats/worldometer/country',function(data){
+            $.get('https://api.covid19india.org/data.json',function(data){
                 //console.log(data.length);
 
                 var tbval = document.getElementById('tbval');
@@ -274,26 +324,3 @@
 </body>
 
 </html>
-
-
-<?php
-
-include './Link/dbcon.php';
-
-if (isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $mobile = $_POST['mobile'];
-    $symptoms = $_POST['coronasym'];
-    $message = $_POST['message'];
-
-    $check = "";
-    foreach ($symptoms as $check1) {
-        $check .= $check1 . ",";
-    }
-    $insertquery = "insert into coronamsg(username,email,mobile,symptom,message) values('$username','$email','$mobile','$check','$message')";
-
-    $query = mysqli_query($con, $insertquery);
-}
-
-?>
