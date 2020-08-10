@@ -62,8 +62,8 @@
                 <h3 class="text-center">INDIA COVID-19 LIVE UPDATES</h3>
             </div>
 
-            <div class="container">
-                <div class="row p-0">
+            <div class="container mt-4">
+                <div class="row p-0 ">
                     <div class="col-lg-3 col-md-3 col-6 text-center">
                         <div>
                             <h1 id="CC"></h1>
@@ -96,13 +96,11 @@
             <div class="table-responsive">
                 <table class="table table-bordered table-striped text-center" id="tbval">
                     <tr>
-                        <th>Country</th>
-                        <th>Total Confirmed</th>
-                        <th>New Cases</th>
-                        <th>Total Recovered</th>
-                        <th>Active Cases</th>
+                        <th>State</th>
+                        <th>Confirmed</th>
+                        <th>Active</th>
+                        <th>Recovered</th>
                         <th>Total Deaths</th>
-                        <th>New Deaths</th>
                     </tr>
                 </table>
             </div>
@@ -190,41 +188,36 @@
         function getAPI() {
 
             $.get('https://api.covid19india.org/data.json',function(data){
-                //console.log(data.length);
+                //console.log(data['statewise'][1]['state']);
 
                 var tbval = document.getElementById('tbval');
-                for (var index = 1; index <= data.length; index++) {
+                for (var index = 1; index <= data['statewise'].length-3; index++) {
                     var x = tbval.insertRow();
                     x.insertCell(0);
-                    tbval.rows[index].cells[0].innerHTML = data[index-1]['country'];
+                    tbval.rows[index].cells[0].innerHTML = data['statewise'][index]['state'];
                     tbval.rows[index].cells[0].style.background = '#7a4a91';
                     tbval.rows[index].cells[0].style.color = 'white';
 
                     x.insertCell(1);
-                    tbval.rows[index].cells[1].innerHTML = data[index-1]['totalConfirmed'];
+                    tbval.rows[index].cells[1].innerHTML = data['statewise'][index]['confirmed'];
 
                     x.insertCell(2);
-                    tbval.rows[index].cells[2].innerHTML = data[index-1]['dailyConfirmed'];
+                    tbval.rows[index].cells[2].innerHTML = data['statewise'][index]['active'];
 
                     x.insertCell(3);
-                    tbval.rows[index].cells[3].innerHTML = data[index-1]['totalRecovered'];
+                    tbval.rows[index].cells[3].innerHTML = data['statewise'][index]['recovered'];
 
                     x.insertCell(4);
-                    tbval.rows[index].cells[4].innerHTML = data[index-1]['activeCases'];
+                    tbval.rows[index].cells[4].innerHTML = data['statewise'][index]['deaths'];
 
-                    x.insertCell(5);
-                    tbval.rows[index].cells[5].innerHTML = data[index-1]['totalDeaths'];
-
-                    x.insertCell(6);
-                    tbval.rows[index].cells[6].innerHTML = data[index-1]['dailyDeaths'];
                 }
             });
 
-            $.get('https://api.coronatracker.com/v3/stats/worldometer/global', function(data) {
-                var cc = data.totalConfirmed,
-                    ac = data.totalActiveCases,
-                    tr = data.totalRecovered,
-                    td = data.totalDeaths;
+            $.get('https://api.coronatracker.com/v3/stats/worldometer/country', function(data) {
+                var cc = data[2]['totalConfirmed'],
+                    tr = data[2]['totalRecovered'],
+                    ac = data[2]['activeCases'],
+                    td = data[2]['totalDeaths'];
                 (function($) {
                     $.fn.countTo = function(options) {
                         // merge the default plugin settings with the custom options

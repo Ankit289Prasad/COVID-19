@@ -190,7 +190,7 @@
         function getAPI() {
 
             $.get('https://api.coronatracker.com/v3/stats/worldometer/country',function(data){
-                //console.log(data.length);
+                //console.log(data[2]['totalConfirmed']);
 
                 var tbval = document.getElementById('tbval');
                 for (var index = 1; index <= data.length; index++) {
